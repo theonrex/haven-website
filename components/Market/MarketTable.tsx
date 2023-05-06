@@ -9,28 +9,26 @@ export default function MarketTable() {
   const [perPage, setPerPage] = useState<number>(30);
   const [pageNumber, setPageNumber] = useState<number>(1);
 
-useEffect(() => {
-  async function fetchCoinData() {
-    const response = await fetch(
-      `http://localhost:3000/api/coinData?page=${pageNumber}&perPage=${perPage}`
-    );
-    const data = await response.json();
-    setCoinData(data);
-  }
+  useEffect(() => {
+    async function fetchCoinData() {
+      const response = await fetch(
+        `/api/coinData?page=${pageNumber}&perPage=${perPage}`
+      );
+      const data = await response.json();
+      setCoinData(data);
+    }
 
-  const timer = setTimeout(() => {
-    fetchCoinData();
-  }, 1000); // add a delay of 1 second
+    const timer = setTimeout(() => {
+      fetchCoinData();
+    }, 1000); // add a delay of 1 second
 
-  return () => clearTimeout(timer);
-}, []);
-
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div>
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg market_table">
         <table className="w-full text-sm text-left text-white-500 dark:text-white-400">
-       
           {coinData ? (
             <tbody>
               {coinData &&
