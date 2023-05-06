@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import fetch from "node-fetch";
+import axios from "axios";
 
 export interface ICoinData {
   id: string;
@@ -14,7 +15,7 @@ export interface ICoinData {
   price_change_percentage_24h: number;
 }
 
-export default async function handler(
+export default async function coinData(
   req: NextApiRequest,
   res: NextApiResponse<ICoinData[]>
 ) {
@@ -23,17 +24,16 @@ export default async function handler(
 
   const options = {
     method: "GET",
+    url: `https://coingecko.p.rapidapi.com/coins/markets?vs_currency=usd&page=${pageNumber}&per_page=${perPage}&order=market_cap_desc`,
     headers: {
       "X-RapidAPI-Key": `${process.env.NEXT_PUBLIC_RAPID_API}`,
       "X-RapidAPI-Host": "coingecko.p.rapidapi.com",
     },
   };
   try {
-    const response = await fetch(
-      `https://coingecko.p.rapidapi.com/coins/markets?vs_currency=usd&page=${pageNumber}&per_page=${perPage}&order=market_cap_desc`,
-      options
-    );
-    const data = (await response.json()) as ICoinData[];
+    const response = await axios.request(options);
+
+    const data = await response.data;
 
     const coinData = data.map((coin: any) => ({
       market_cap_rank: coin.market_cap_rank,
