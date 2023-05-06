@@ -1,0 +1,17 @@
+// {
+//   "extends": ["next/babel","next/core-web-vitals"]
+// }
+
+
+{
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "babel-eslint",
+  "plugins": [
+    "eslint-plugin-next"
+  ],
+  "rules": {}
+}

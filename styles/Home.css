@@ -1,0 +1,413 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap");
+/* Home Banner */
+.HomeBanner {
+  text-align: center;
+  background-color: rgb(8, 8, 8);
+  padding-top: 2em;
+  border-radius: 2em;
+  backdrop-filter: blur(19px) saturate(24%);
+  -webkit-backdrop-filter: blur(19px) saturate(24%);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.HomeBanner section {
+  padding: 2em;
+}
+
+.HomeBanner .Welcome {
+  text-align: left;
+  border-radius: 0.5em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 4em;
+  text-transform: lowercase;
+  line-height: 1.2em;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.arrow_icon img {
+  bottom: 0.7em;
+  left: 5em;
+}
+
+.HomeBanner {
+  display: flex;
+}
+
+.HomeBanner h1 {
+  font-weight: 700;
+  margin: auto;
+}
+
+.HomeBanner h1 span {
+  color: orange;
+}
+
+.HomeBanner p {
+  padding-top: 1em;
+  font-size: 1em;
+  width: 90%;
+  text-align: left;
+}
+
+.HomeBanner .orange_btn_div {
+  text-align: left;
+}
+
+.widget_scroll {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.widget {
+  background-color: rgba(36, 36, 36, 0.166);
+  width: 100;
+  padding: 2em 3em 2em 1em;
+  margin: 2em;
+  border-radius: 1em;
+  max-width: 550px;
+  box-shadow: 0px 0px 4px 1px rgba(255, 82, 2, 0.1);
+}
+
+.widget h3 {
+  font-size: 0.9em;
+  letter-spacing: normal;
+}
+
+.widget_price {
+  font-size: 0.8em;
+}
+
+/* Get Started */
+.get_started {
+  padding: 3em 0;
+  background-color: rgb(13, 13, 13);
+}
+
+.get_started h4 {
+  color: orange;
+  font-size: 1em;
+}
+
+.get_started h1 {
+  padding: 0.2em 0;
+  font-size: 3em;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.get_started p {
+  font-size: 0.9em;
+  padding-bottom: 2.5em;
+}
+
+.Start_trading_btn {
+  background-color: orange;
+  padding: 1em 3em;
+  border-radius: 1em;
+  margin-bottom: 3em;
+}
+
+.GetStartedData {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0.5em;
+  padding: 1em;
+  width: 45%;
+  float: left;
+}
+
+.Crypto_Premium {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.Crypto_Premium header {
+  color: orange;
+}
+
+.Crypto_PremiumData section {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+}
+
+.Crypto_PremiumData h3 {
+  padding: 0 0.3em;
+}
+
+.GetStartedData img {
+  padding-bottom: 1em;
+}
+
+.GetStartedData h3 {
+  font-size: 1em;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+/* Best_Service */
+.Best_Service {
+  padding: 3em 0;
+}
+
+.Best_Service h4 {
+  text-align: center;
+  font-size: 1em;
+}
+
+.Best_Service header {
+  text-align: center;
+  font-size: 2em;
+}
+
+.Best_Service p {
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  padding: 0.9em 0;
+}
+
+.servicesData {
+  background-color: rgb(17, 17, 17);
+  padding: 1em;
+  margin: 1em;
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: flex-start;
+  border-radius: 1em;
+}
+
+.servicesData p {
+  text-align: left;
+  width: 100%;
+}
+
+.servicesData:hover {
+  background-color: black;
+}
+
+.servicesData h1 {
+  font-size: 1em;
+  font-weight: bold;
+  padding: 0.6em 0;
+}
+
+/* partners */
+.Partners {
+  text-align: center;
+  font-size: 1.4em;
+}
+
+.Partners_img {
+  display: flex;
+  flex-direction: row;
+  margin: 1em;
+}
+
+/* contact */
+.Subscribe_btn:focus,
+.Subscribe_btn::after,
+.Subscribe_btn:active,
+.Subscribe_btn:target,
+.Subscribe_btn::before,
+.Subscribe_btn {
+  border: 1px solid rgb(255, 255, 255) !important;
+  outline: none !important;
+  border-color: rgb(255, 255, 255) !important;
+  /* set the desired border color */
+  box-shadow: 0 0 5px rgb(255, 255, 255) !important;
+  background-color: rgba(255, 0, 0, 0) !important;
+}
+
+.Subscribe {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  align-content: space-between;
+  justify-content: space-around;
+  padding: 4em 0;
+  background-color: orange;
+  margin: 3em auto;
+  border-radius: 2em;
+  width: 80%;
+}
+
+.Subscribe h1 {
+  font-size: 1.5em;
+}
+
+/* Media query */
+@media screen and (max-width: 1200px) {
+  .HomeBanner .Welcome {
+    text-align: center;
+    width: 100%;
+    font-size: 4em;
+    text-transform: lowercase;
+    line-height: 1.2em;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .Crypto_Premium, .Crypto_PremiumData {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .Crypto_PremiumData section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .HomeBanner p {
+    padding-top: 1em;
+    font-size: 1em;
+    width: 80%;
+    text-align: center;
+  }
+  .HomeBanner .orange_btn_div {
+    text-align: center;
+  }
+  .col50 {
+    width: 100%;
+  }
+  /* HomeBanner  */
+  .HomeBanner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .HomeBanner section {
+    text-align: center;
+  }
+  .HomeBanner .HomeBannerImage {
+    width: 100%;
+  }
+  .HomeBanner p {
+    margin: auto;
+  }
+  /* get started */
+  .GetStarted {
+    display: table;
+    width: 100%;
+    margin: auto;
+  }
+  .get_started p {
+    width: 80%;
+  }
+  /* TopMarket*/
+  .TopMarket_img {
+    width: 60px;
+  }
+  /* servicesData  */
+  .services {
+    display: block;
+  }
+  .servicesData {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 867px) {
+  .nav_hide .havenSwap {
+    display: none;
+  }
+}
+@media screen and (max-width: 667px) {
+  .GetStarted {
+    display: flex;
+    width: 100%;
+    margin: auto;
+  }
+  .GetStartedData {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0.3em auto;
+    padding: 1em;
+    width: 90%;
+  }
+  .services {
+    display: flex;
+    padding: 1em 2em;
+  }
+  .Best_Service .servicesData p {
+    width: 100%;
+    text-align: left;
+  }
+  .Best_Service p {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    padding: 0.9em 0;
+  }
+  .servicesData {
+    padding: 2em;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 560px) {
+  .get_started h1 {
+    padding: 0.2em 0;
+    font-size: 2em;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+  .Welcome br {
+    display: none;
+  }
+  .HomeBanner .Welcome {
+    font-size: 3em;
+  }
+  .arrow_icon img {
+    width: 80px;
+  }
+}
+@media screen and (max-width: 410px) {
+  .HomeBanner .Welcome {
+    font-size: 2.3em;
+  }
+  .HomeBanner p {
+    font-size: 1em;
+    width: 100%;
+    text-align: center;
+  }
+  .arrow_icon img {
+    bottom: 0.7em;
+    left: 3em;
+  }
+  .arrow_icon img {
+    width: 80px;
+  }
+  .get_started p {
+    width: 100%;
+  }
+  .TopMarket_img {
+    width: 40px;
+  }
+  .orange_btn {
+    font-size: 0.7em;
+  }
+}
+@media screen and (max-width: 410px) {
+  .get_started h1 {
+    padding: 0.2em 0;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+}/*# sourceMappingURL=Home.css.map */

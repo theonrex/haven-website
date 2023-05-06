@@ -1,0 +1,28 @@
+{
+  "GetStartedData": [
+    {
+      "id": 1,
+      "title": " Create an Account",
+      "url": "https://img.icons8.com/arcade/64/null/guest-male.png",
+      "details": "Sign up with your wallet and enjoy havenswap benefits"
+    },
+    {
+      "id": 2,
+      "title": " Claim Nft",
+      "url": "https://img.icons8.com/fluency/48/null/nft.png",
+      "details": "Claim our free and paid Nft to enjoy more benefits"
+    },
+    {
+      "id": 3,
+      "title": " Add funds to wallet",
+      "url": "https://img.icons8.com/fluency/48/null/add-dollar.png",
+      "details": "Quickly add money to your investment wallet and start trading"
+    },
+    {
+      "id": 4,
+      "title": " Start Trading",
+      "url": "https://img.icons8.com/3d-fluency/94/null/combo-chart.png",
+      "details": "Buy and Sell a variey of top coins at best prices"
+    }
+  ]
+}

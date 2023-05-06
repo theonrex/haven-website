@@ -1,0 +1,83 @@
+/* MarketBanner */
+.MarketBanner_Price {
+    background-color: rgb(31, 31, 31);
+    padding: 2em;
+    border-radius: 1em;
+}
+
+.MarketBanner_Price h1 {
+    font-size: 2em;
+    padding-bottom: 0.5em;
+}
+
+.MarketBanner_Price p {
+    width: 50%;
+
+}
+
+.market_table {
+    margin-top: 3em;
+    background-color: rgb(12, 12, 12);
+    padding: 2em;
+    border-radius: 1em;
+}
+
+.market_cap_rank section {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+}
+
+.market_cap_rank svg {
+    margin: 0 1em 0 0;
+
+}
+
+.symbol section {
+    display: flex;
+    /* justify-content: flex-start; */
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start
+}
+
+.coin_symbol {
+    background-color: black;
+    padding: 0.3em 0.8em;
+    border-radius: 0.5em;
+    text-transform: uppercase;
+    color: orange;
+}
+
+.green {
+    color: rgb(0, 255, 234);
+}
+
+.red {
+    color: red;
+}
+
+tr:hover {
+    background-color: rgb(28, 19, 0);
+}
+
+tr {
+
+    border: 1px rgba(255, 166, 0, 0.184) solid !important;
+    /* border-top: none !important; */
+    border-right-width: 0px !important;
+    border-left-width: 0px !important;
+}
+
+@media screen and (max-width: 1200px) {
+    .MarketBanner_Price p {
+    width: 100%;
+}
+}
+
+@media screen and (max-width: 980px) {
+//  .high_24h{
+//     display: none;
+//  }
+}

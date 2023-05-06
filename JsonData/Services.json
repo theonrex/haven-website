@@ -1,0 +1,46 @@
+{
+  "OurServices": [
+    {
+      "id": 1,
+      "title": "Safety Comes First ",
+      "url": "https://img.icons8.com/fluency/48/null/shield.png",
+      "followed": "followed by terylucas + 2 more",
+      "reels": "https://ipfs.thirdwebcdn.com/ipfs/QmVfHdcBG8Gwc8QJqhqWhS8wvLbYV3besAb5gWxV6TAYjF/Vector%20(1).png"
+    },
+    {
+      "id": 1,
+      "title": " Easy Deposit and WithDrawls",
+      "url": "https://img.icons8.com/fluency/48/null/add-dollar.png",
+      "followed": "followed by terylucas + 2 more",
+      "reels": "https://ipfs.thirdwebcdn.com/ipfs/QmVfHdcBG8Gwc8QJqhqWhS8wvLbYV3besAb5gWxV6TAYjF/Vector%20(1).png"
+    },
+    {
+      "id": 1,
+      "title": "Free Nft ",
+      "url": "https://img.icons8.com/fluency/48/null/nft.png",
+      "followed": "followed by terylucas + 2 more",
+      "reels": "https://ipfs.thirdwebcdn.com/ipfs/QmVfHdcBG8Gwc8QJqhqWhS8wvLbYV3besAb5gWxV6TAYjF/Vector%20(1).png"
+    },
+    {
+      "id": 1,
+      "title": " Encryption",
+      "url": "https://img.icons8.com/external-flat-icons-vectorslab/68/null/external-Encryption-hacking-flat-icons-vectorslab.png",
+      "followed": "followed by terylucas + 2 more",
+      "reels": "https://ipfs.thirdwebcdn.com/ipfs/QmVfHdcBG8Gwc8QJqhqWhS8wvLbYV3besAb5gWxV6TAYjF/Vector%20(1).png"
+    },
+    {
+      "id": 1,
+      "title": " 24/7 Support",
+      "url": "https://img.icons8.com/external-vectorslab-flat-vectorslab/53/null/external-Customer-Support-customer-support-vectorslab-flat-vectorslab.png",
+      "followed": "followed by terylucas + 2 more",
+      "reels": "https://ipfs.thirdwebcdn.com/ipfs/QmVfHdcBG8Gwc8QJqhqWhS8wvLbYV3besAb5gWxV6TAYjF/Vector%20(1).png"
+    },
+    {
+      "id": 1,
+      "title": " Fast Transaction",
+      "url": "https://img.icons8.com/fluency/48/null/refund-2.png",
+      "followed": "followed by terylucas + 2 more",
+      "reels": "https://ipfs.thirdwebcdn.com/ipfs/QmVfHdcBG8Gwc8QJqhqWhS8wvLbYV3besAb5gWxV6TAYjF/Vector%20(1).png"
+    }
+  ]
+}
