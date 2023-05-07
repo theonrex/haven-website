@@ -22,8 +22,8 @@
   text-align: left ;
   border-radius: 0.5em;
   width: fit-content;
-  font-size: 4em;
-  text-transform: lowercase;
+  font-size: 3em;
+  text-transform:capitalize;
   line-height: 1.2em;
   background-color: #00000000;
 
@@ -254,13 +254,18 @@
 }
 
 /* Media query */
+@media screen and (max-width: 1300px) {
+  .servicesData {
+    width: 45% ;
+  }
+}
+
 @media screen and (max-width: 1200px) {
 
   .HomeBanner .Welcome {
     text-align: center ;
     width: 100%;
     font-size: 4em;
-    text-transform: lowercase;
     line-height: 1.2em;
     background-color: rgba(0, 0, 0, 0);
 }
@@ -337,7 +342,7 @@
   }
 
   .servicesData {
-    width: 45%;
+    width: 45% !important;
   }
 }
 
@@ -394,13 +399,17 @@ display: none;
     font-weight: 700;
     text-transform: capitalize;
 }
-  .Welcome br{
-    display: none;
-  }
+  // .Welcome br{
+  //   display: none;
+  // }
   .HomeBanner .Welcome {
 
-    font-size: 3em;
+    font-size: 2.6em;
   
+}
+
+.HomeBanner section {
+    padding: 0.6em;
 }
 .arrow_icon img {
 width: 80px;
@@ -444,5 +453,27 @@ width: 80px;
     font-size: 1.5em;
     font-weight: 700;
     text-transform: capitalize;
+}
+
+.HomeBanner section {
+    padding: 0.4em;
+}
+}
+
+@media screen and (max-width: 345px) {
+
+.HomeBanner .Welcome {
+    font-size: 2em;
+}
+.HomeBanner p {
+    font-size: 0.8em;
+ 
+}
+}
+
+@media screen and (max-width: 289px) {
+
+.HomeBanner .Welcome {
+    font-size: 1.6em;
 }
 }

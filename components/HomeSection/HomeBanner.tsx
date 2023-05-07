@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import HomeBannerImage from "../../public/images/havenpng.png";
+import HomeBannerImage from "../../public/images/havenimg.webp";
 import { Button } from "flowbite-react";
 import ArrowIcon from "../../public/icons/Arrow_03.png";
 
@@ -34,10 +34,11 @@ export default function HomeBanner() {
         </div>{" "}
       </section>
       <section className="col50">
+     
         <Image
           src={HomeBannerImage}
           alt="HomeBannerImage"
-          width={500}
+          width={1000}
           className="HomeBannerImage"
         />
       </section>

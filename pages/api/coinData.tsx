@@ -15,7 +15,7 @@ export interface ICoinData {
   price_change_percentage_24h: number;
 }
 
-export default async function coinData(
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<ICoinData[]>
 ) {

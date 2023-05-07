@@ -3,32 +3,40 @@ import React, { useState, useEffect } from "react";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import Image from "next/image";
 import { ICoinData } from "../../pages/api/coinData";
-
+import { Spinner } from "flowbite-react";
 export default function MarketTable() {
   const [coinData, setCoinData] = useState<ICoinData[]>([]);
   const [perPage, setPerPage] = useState<number>(30);
   const [pageNumber, setPageNumber] = useState<number>(1);
+  const [loading, setLoading] = useState(true)
 
-  useEffect(() => {
-    async function fetchCoinData() {
-      const response = await fetch(
-        `/api/coinData?page=${pageNumber}&perPage=${perPage}`
-      );
-      const data = await response.json();
-      setCoinData(data);
-    }
+useEffect(() => {
+  async function fetchCoinData() {
+    const response = await fetch(
+      `/api/coinData?page=${pageNumber}&perPage=${perPage}`
+    );
+    const data = await response.json();
+    setCoinData(data);
+    setLoading(false)
+  }
 
-    const timer = setTimeout(() => {
-      fetchCoinData();
-    }, 1000); // add a delay of 1 second
+  const timer = setTimeout(() => {
+    fetchCoinData();
+  }, 100); // add a delay of 1 second
 
-    return () => clearTimeout(timer);
-  }, []);
-
+  return () => clearTimeout(timer);
+}, []);
+  if (loading === true) return (
+    <div className="flex pt-4 justify-center">
+      Loading <span className="pl-4"> <Spinner/> </span>
+  </div>
+)
   return (
     <div>
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg market_table">
         <table className="w-full text-sm text-left text-white-500 dark:text-white-400">
+       
+          
           {coinData ? (
             <tbody>
               {coinData &&

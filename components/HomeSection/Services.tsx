@@ -23,10 +23,7 @@ export default function Services() {
                   height={40}
                 />{" "}
                 <h1>{data.title}</h1>
-                <p>
-                  nostrum at ad ex maxime! Natus ex ratione deserunt quidem
-                  error qui nostrum nisi iusto?
-                </p>
+                <p>{data.text}</p>
               </div>
             );
           })}
