@@ -1,0 +1,28 @@
+{
+  "NFTFeatursData": [
+    {
+      "id": 1,
+      "title": " NFts Data",
+      "url": "https://img.icons8.com/fluency/48/null/graph.png",
+      "details": "Sign up with your wallet and see NFTs owned by any wallet or contract"
+    },
+    {
+      "id": 2,
+      "title": " Nft Transfer",
+      "url": "https://img.icons8.com/fluency/48/null/nft.png",
+      "details": "Get any wallet address Nfts transfer by block, token id or collection"
+    },
+    {
+      "id": 3,
+      "title": "NFT Collection",
+      "url": "https://img.icons8.com/external-flaticons-flat-flat-icons/64/null/external-collection-fashion-week-flaticons-flat-flat-icons-4.png",
+      "details": "Get any wallet address Nfts Collection by address"
+    },
+    {
+      "id": 4,
+      "title": " NFT Owner",
+      "url": "https://img.icons8.com/3d-fluency/94/null/combo-chart.png",
+      "details": "Get any NFT owner by its address"
+    }
+  ]
+}

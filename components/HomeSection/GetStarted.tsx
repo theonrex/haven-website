@@ -1,5 +1,7 @@
 import React from "react";
 import GetStartedData from "../../JsonData/GetStartedData.json";
+import CryptoFeatursData from "../../JsonData/CryptoFeatures.json";
+import NFTFeatursData from "../../JsonData/NFTFeatursData.json";
 import Image from "next/image";
 import CryptoImg from "../../public/images/cryptophone.png";
 import CryptoImg1 from "../../public/images/havenmobile.webp";
@@ -47,15 +49,15 @@ export default function GetStarted() {
           <section className="col50 pr-20">
             <div className="  Crypto_Premium">
               <header>Features</header>
-              <h1>Crypto Premium</h1>
-              {GetStartedData &&
-                GetStartedData.GetStartedData.map((data, index) => {
+              <h1>Cryptocurrency</h1>
+              {CryptoFeatursData &&
+                CryptoFeatursData.CryptoFeatursData.map((data, index) => {
                   return (
                     <div key={index} className=" Crypto_PremiumData">
                       <section>
                         <Image
                           src={data.url}
-                          alt="GetStartedData Image pt-2 pr-4"
+                          alt="CryptoFeatursData Image pt-2 pr-4"
                           width={40}
                           height={40}
                         />
@@ -92,15 +94,15 @@ export default function GetStarted() {
           <section className="col50">
             <div className="  Crypto_Premium">
               <header>Features</header>
-              <h1>NFTs Premium</h1>
-              {GetStartedData &&
-                GetStartedData.GetStartedData.map((data, index) => {
+              <h1>NFTs </h1>
+              {NFTFeatursData &&
+                NFTFeatursData.NFTFeatursData.map((data, index) => {
                   return (
                     <div key={index} className=" Crypto_PremiumData">
                       <section>
                         <Image
                           src={data.url}
-                          alt="GetStartedData Image pt-2 pr-4"
+                          alt="NFTFeatursData Image pt-2 pr-4"
                           width={40}
                           height={40}
                         />

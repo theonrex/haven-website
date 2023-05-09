@@ -1,0 +1,28 @@
+{
+  "CryptoFeatursData": [
+    {
+      "id": 1,
+      "title": " Crypto Data",
+      "url": "https://img.icons8.com/fluency/48/null/graph.png",
+      "details": "Sign up with your wallet and see Cryptos owned by any wallet or contract"
+    },
+    {
+      "id": 2,
+      "title": " Crypto Transfer",
+      "url": "https://img.icons8.com/external-wanicon-lineal-color-wanicon/64/null/external-transfer-currency-wanicon-lineal-color-wanicon.png",
+      "details": "Get any wallet address Cryptos transfer by block, token-id"
+    },
+    {
+      "id": 3,
+      "title": "Crypto balance",
+      "url": "https://img.icons8.com/fluency/48/null/add-dollar.png",
+      "details": "Get any wallet address Cryptos balance by address"
+    },
+    {
+      "id": 4,
+      "title": " Crypto Owner",
+      "url": "https://img.icons8.com/external-flaticons-flat-flat-icons/64/null/external-owner-computer-programming-flaticons-flat-flat-icons.png",
+      "details": "Get any Crypto owner by its address"
+    }
+  ]
+}

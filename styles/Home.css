@@ -311,6 +311,8 @@
   }
   .get_started p {
     width: 80%;
+    padding-left: 0;
+    padding-right: 0;
   }
   /* TopMarket*/
   .TopMarket_img {
@@ -361,7 +363,7 @@
   }
   .servicesData {
     padding: 2em;
-    width: 100%;
+    width: 100% !important;
   }
 }
 @media screen and (max-width: 560px) {
