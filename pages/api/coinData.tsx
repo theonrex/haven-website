@@ -24,11 +24,7 @@ export default async function handler(
 
   const options = {
     method: "GET",
-    url: `https://coingecko.p.rapidapi.com/coins/markets?vs_currency=usd&page=${pageNumber}&per_page=${perPage}&order=market_cap_desc`,
-    headers: {
-      "X-RapidAPI-Key": `${process.env.NEXT_PUBLIC_RAPID_API}`,
-      "X-RapidAPI-Host": "coingecko.p.rapidapi.com",
-    },
+    url: `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=${perPage}&page=${pageNumber}&sparkline=false&locale=en`,
   };
   try {
     const response = await axios.request(options);

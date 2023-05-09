@@ -109,15 +109,10 @@ export async function getServerSideProps() {
     },
   };
   try {
-    // const response = await fetch(options);
     const response = await axios.request(options);
 
     const topCoinData = response.data;
     console.log(response.data);
-
-    // const res = await fetch(`https://api.coingecko.com/api/v3/global`);
-    // const data = await res.json();
-
     return {
       props: {
         topCoin: topCoinData,
