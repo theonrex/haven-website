@@ -3,15 +3,19 @@
   background-color: rgb(31, 31, 31);
   padding: 2em;
   border-radius: 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .MarketBanner_Price h1 {
   font-size: 2em;
-  padding-bottom: 0.5em;
+  padding-bottom: 0.1em;
 }
 
 .MarketBanner_Price p {
-  width: 50%;
+  width: 90%;
 }
 
 .market_table {
@@ -65,6 +69,34 @@ tr {
   /* border-top: none !important; */
   border-right-width: 0px !important;
   border-left-width: 0px !important;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+.pagination li {
+  padding: 0em 0.6em;
+  color: orange;
+  border: 1px orange solid;
+  margin: 0.7em 0.4em;
+  border-radius: 0.4em;
+}
+
+.pagination .active {
+  padding: 0em 0.6em;
+  color: orange;
+  color: white;
+  border-radius: 0.4em;
+  background-color: orange;
+}
+
+/* style for the HTML element with aria-label "my-label" */
+li:has(> [aria-label="Go to first page"]),
+li:has(> [aria-label="Go to last page"]) {
+  display: none;
 }
 
 @media screen and (max-width: 1200px) {

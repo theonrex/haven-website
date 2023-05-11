@@ -32,6 +32,7 @@ export default async function handler(
       "X-RapidAPI-Host": "coingecko.p.rapidapi.com",
     },
   };
+
   try {
     const response = await axios.request(options);
 

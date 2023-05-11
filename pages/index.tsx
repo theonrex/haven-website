@@ -14,12 +14,15 @@ import Subscribe from "@/components/HomeSection/Subscribe";
 import Marquee from "react-fast-marquee";
 import { Spinner } from "flowbite-react";
 
-import { Props } from "@/Types/TopMarketTypes";
+import { TopMarketProps } from "@/Types/TopMarketTypes";
 
 const inter = Inter({ subsets: ["latin"] });
-//export default function Home({ topCoin }: { topCoin: Props[] | null }) {
 
-export default function Home({ topCoin }: { topCoin: Props[] | null }) {
+export default function Home({
+  topCoin,
+}: {
+  topCoin: TopMarketProps[] | null;
+}) {
   return (
     <>
       <main className="pt-26 ">
@@ -101,18 +104,13 @@ export default function Home({ topCoin }: { topCoin: Props[] | null }) {
 export async function getServerSideProps() {
   const options = {
     method: "GET",
-    url: "https://coingecko.p.rapidapi.com/coins/markets?vs_currency=usd&page=1&per_page=10&order=market_cap_desc",
-
-    headers: {
-      "X-RapidAPI-Key": process.env.NEXT_PUBLIC_RAPID_API,
-      "X-RapidAPI-Host": "coingecko.p.rapidapi.com",
-    },
+    url: `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=${`10`}&page=${`1`}&sparkline=false&locale=en`,
   };
   try {
     const response = await axios.request(options);
 
     const topCoinData = response.data;
-    console.log(response.data);
+    // console.log(response.data);
     return {
       props: {
         topCoin: topCoinData,

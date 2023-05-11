@@ -6,7 +6,7 @@ export interface CounterState {
 }
 
 const initialState: CounterState = {
-  value: 10,
+  value: 0,
 };
 
 export const counterSlice = createSlice({
@@ -14,8 +14,8 @@ export const counterSlice = createSlice({
   initialState,
   reducers: {
     increment: (state) => {
- 
-      state.value += 15;
+    
+      state.value += 21;
     },
     decrement: (state) => {
       state.value -= 1;

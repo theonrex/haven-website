@@ -34,7 +34,6 @@ export default function HomeBanner() {
         </div>{" "}
       </section>
       <section className="col50">
-     
         <Image
           src={HomeBannerImage}
           alt="HomeBannerImage"

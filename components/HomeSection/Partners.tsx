@@ -17,6 +17,7 @@ export default function Partners() {
                 pauseOnHover={false}
                 gradient={false}
                 play={true}
+                key={i}
               >
                 <div className="Partners_img" key={i}>
                   <Image
