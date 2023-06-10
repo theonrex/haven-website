@@ -9,6 +9,8 @@ import { NextPageContext } from "next";
 import Pagination from "react-js-pagination";
 import { useParams } from "react-router-dom";
 import Link from "next/link";
+import Layout from "@/Layout/layout";
+import Footer from "@/components/Footer";
 interface marketProps {
   marketCoins: CoinMarketProps;
 }

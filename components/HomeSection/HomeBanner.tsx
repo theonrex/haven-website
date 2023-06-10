@@ -11,7 +11,7 @@ export default function HomeBanner() {
         <header className="Welcome ">
           <h1 className="">
             <span className="arrow_icon relative">
-              Welcome to
+             Trade Crypto and 
               <Image
                 src={ArrowIcon}
                 alt="arrow icon"
@@ -19,7 +19,7 @@ export default function HomeBanner() {
                 className="absolute "
               />
             </span>
-            <br /> <span>Crypto & NFT trading</span> <br /> Market Hub
+            <br /> <span>and NFTs with Ease</span> <br />
           </h1>
         </header>
         <p>

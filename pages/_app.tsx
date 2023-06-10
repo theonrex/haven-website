@@ -1,17 +1,18 @@
+import { useEffect } from "react";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import "flowbite"; //tailwind plugin
+import "../styles/dashboard.css";
 import "../styles/globals.css";
 import "../styles/Navbar.css";
 import "../styles/Home.css";
 import "../styles/market.css";
 import Head from "next/head";
+import Navbar from "../Layout/layout";
 import "@rainbow-me/rainbowkit/styles.css";
 import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { configureChains, createClient, WagmiConfig } from "wagmi";
 import { polygonMumbai } from "wagmi/chains";
 import { publicProvider } from "wagmi/providers/public";
-// import store from "../storeConfig/store"
 import { store } from "../store";
 import { Provider } from "react-redux";
 const { chains, provider } = configureChains(
@@ -29,6 +30,10 @@ const wagmiClient = createClient({
 });
 
 export default function App({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    import("preline");
+  }, []);
+
   return (
     <>
       <Provider store={store}>
@@ -43,6 +48,7 @@ export default function App({ Component, pageProps }: AppProps) {
         </Head>
         <WagmiConfig client={wagmiClient}>
           <RainbowKitProvider chains={chains}>
+            <Navbar />
             <Component {...pageProps} />
           </RainbowKitProvider>
         </WagmiConfig>

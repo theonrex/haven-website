@@ -1,7 +1,9 @@
-import React from 'react'
-
+import React from "react";
+import Dashboard from "@/WalletPage/dashboard";
 export default function wallet() {
   return (
-    <div>wallet</div>
-  )
+    <div>
+      <Dashboard />
+    </div>
+  );
 }

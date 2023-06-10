@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Nav() {
   return (
-    <nav className="bg-black dark:bg-gray-900  w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+    <nav className="fixed bg-black dark:bg-gray-900  w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
       <div className="max-w-screen-xl nav_hide flex flex-wrap items-center justify-between mx-auto p-4">
         <Link href="/" className="flex items-center ">
           <Image

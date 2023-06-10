@@ -11,12 +11,10 @@ export interface GlobalDataProps {
   ended_icos: number;
   total_market_cap: number;
   markets: number;
+  data: any;
 }
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<GlobalDataProps[]>
-) {
+export default async function handler(res: NextApiResponse<GlobalDataProps[]>) {
   // Define the options for the request to the API
   const options = {
     method: "GET",
@@ -31,7 +29,7 @@ export default async function handler(
 
     const data = await response.data;
     // Map the data to match the interface defined above
-
+    console.log(data);
     const GlobalData = data.map((coin: GlobalDataProps) => ({
       active_cryptocurrencies: coin.active_cryptocurrencies,
       upcoming_icos: coin.upcoming_icos,
@@ -47,7 +45,7 @@ export default async function handler(
   } catch (error) {
     // Log any errors and return an empty array
 
-    // console.error("Error fetching coin data:", error);
+    console.error("Error fetching global coin data:", error);
     res.status(500).json([]);
   }
 }

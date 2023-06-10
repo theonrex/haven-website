@@ -25,7 +25,7 @@ export default async function handler(
   const options = {
     method: "GET",
     // url: `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=${perPage}&page=${pageNumber}&sparkline=false&locale=en`,
-    url: `https://coingecko.p.rapidapi.com/coins/markets?vs_currency=usd&page=${pageNumber}&per_page=${perPage}&order=market_cap_desc`,
+    url: `https://coingecko.p.rapidapi.com/coins/markets?vs_currency=usd&page=${pageNumber}&per_page=100&order=market_cap_desc`,
 
     headers: {
       "X-RapidAPI-Key": `${process.env.NEXT_PUBLIC_RAPID_API}`,
@@ -53,7 +53,7 @@ export default async function handler(
 
     res.status(200).json(coinData);
   } catch (error) {
-    // console.error("Error fetching coin data:", error);
-    // res.status(500).json([]);
+    console.error("Error fetching search coin data:", error);
+    res.status(500).json([]);
   }
 }

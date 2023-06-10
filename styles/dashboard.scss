@@ -1,0 +1,47 @@
+.dashboard_row{
+    display: table;
+    width: 100%;
+    margin: auto;
+}
+
+
+.myTabContent {
+  width: 80%;
+//   margin-left: 16rem;
+  float: left;
+}
+
+
+
+.DashboardSidebar {
+  width: 20%;
+  float: left;
+  top: 4.5em;
+}
+
+.col50 {
+  width: 50%;
+}
+
+.BuyCrypto {
+  border: 1px solid white;
+  border-radius: 9px;
+  position: absolute;
+}
+
+.BuyCrypto_img {
+  right: 0;
+  position: relative;
+}
+.token_address_flex{
+        display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+@media screen and (max-width: 1023px) {
+  .myTabContent {
+    width: 100%;
+    margin-left: 0;
+  }
+}

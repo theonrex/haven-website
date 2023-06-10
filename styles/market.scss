@@ -8,7 +8,11 @@
   align-items: center;
   justify-content: space-between;
 }
-
+.Market_Dashboard{
+  padding-top: 3em;
+  top: 4em;
+  color: white;
+}
 .MarketBanner_Price h1 {
   font-size: 2em;
   padding-bottom: 0.1em;
@@ -80,9 +84,8 @@ tr {
   padding: 0em 0.6em;
   color: orange;
   border: 1px orange solid;
-    margin: 0.7em 0.4em;
+  margin: 0.7em 0.4em;
   border-radius: 0.4em;
-
 }
 
 .pagination .active {
@@ -95,12 +98,24 @@ tr {
 
 /* style for the HTML element with aria-label "my-label" */
 
-li:has(>[aria-label="Go to first page"]),
-li:has(>[aria-label="Go to last page"]) {
+li:has(> [aria-label="Go to first page"]),
+li:has(> [aria-label="Go to last page"]) {
   display: none;
 }
 
-
+.searchModal .Search_btn {
+  background-color: #000000;
+  width: 9em;
+  border-color: #ffffff;
+  border-width: 1px;
+  border-radius: 5px;
+}
+.BiSearch {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+}
 @media screen and (max-width: 1200px) {
   .MarketBanner_Price p {
     width: 100%;

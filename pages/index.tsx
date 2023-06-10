@@ -6,7 +6,6 @@ import axios from "axios";
 import HomeBanner from "@/components/HomeSection/HomeBanner";
 import TopMarket from "@/components/HomeSection/TopMarket";
 import Header from "../components/header";
-import Main from "../components/main";
 import GetStarted from "@/components/HomeSection/GetStarted";
 import Partners from "@/components/HomeSection/Partners";
 import Services from "@/components/HomeSection/Services";

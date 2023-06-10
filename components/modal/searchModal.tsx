@@ -3,7 +3,8 @@ import "flowbite"; //tailwind plugin
 import { ICoinData } from "../../pages/api/coinData";
 import Image from "next/image";
 import { GlobalDataProps } from "@/pages/api/globalData";
-
+import axios from "axios";
+import { BiSearch } from "react-icons/bi";
 export default function searchModal() {
   const [coinData, setCoinData] = useState<ICoinData[]>([]);
   const [perPage, setPerPage] = useState<number>(0);
@@ -11,27 +12,47 @@ export default function searchModal() {
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [filteredCoinData, setFilteredCoinData] = useState<ICoinData[]>([]);
   const [loading, setLoading] = useState(true);
-  const [global, setGlobal] = useState<GlobalDataProps[]>([]);
+  const [globalData, setGlobalData] = useState<GlobalDataProps>();
+
+  // useEffect(() => {
+  //   async function fetchGlobalCoinData() {
+  //     const response = await fetch(`/api/globalData/`);
+  //     console.log(response);
+
+  //     const data = await response.json();
+  //     setGlobal(data);
+
+  //     setLoading(false);
+  //   }
+
+  //   fetchGlobalCoinData();
+  // }, []);
 
   useEffect(() => {
-    async function fetchGlobalCoinData() {
-      const response = await fetch(`/api/globalData`);
-      const data = await response.json();
-      setGlobal(data);
-
-      setLoading(false);
-    }
-
-    fetchGlobalCoinData();
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "https://api.coingecko.com/api/v3/global"
+        ); // Replace with your API endpoint
+        const data = response.data;
+        setGlobalData(data);
+      } catch (error) {
+        console.error("Error fetching coin data:", error);
+      }
+    };
+    fetchData();
   }, []);
 
-  //console.log(global);
+  console.log(globalData?.data.active_cryptocurrencies);
 
   useEffect(() => {
     async function fetchCoinData() {
+      const perPageCoin = await globalData?.data.active_cryptocurrencies;
+      console.log("perPageCoin", perPageCoin);
       const response = await fetch(
-        `/api/searchData?page=${pageNumber}&perPage=${perPage}`
+        `/api/searchData?page=${pageNumber}&perPage=${perPageCoin}`
       );
+
       const data = await response.json();
       setCoinData(data);
       setLoading(false);
@@ -40,7 +61,7 @@ export default function searchModal() {
     fetchCoinData();
   }, []);
 
-  //console.log("coinData", coinData);
+  // console.log("coinData", coinData);
 
   function handleSearch(event: React.ChangeEvent<HTMLInputElement>) {
     const query = event.target.value;
@@ -55,32 +76,22 @@ export default function searchModal() {
     }
   }
 
-  // //console.log(filteredCoinData);
+  //console.log(filteredCoinData);
 
   return (
-    <div>
+    <div className="searchModal">
       {/* Modal toggle */}
-
-      <input
-        type="text"
-        value={searchQuery}
-        id="simple-search"
-        className="searchQuery bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-        placeholder="Search"
-        required
-        onChange={handleSearch}
-      />
-      <label htmlFor="simple-search" className="sr-only">
-        Search
-      </label>
 
       <button
         data-modal-target="staticModal"
         data-modal-toggle="staticModal"
-        className="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        className="block text-white bg-white Search_btn   font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         type="button"
       >
-        Toggle modal
+        <span className="BiSearch">
+          <BiSearch />
+          Search
+        </span>
       </button>
       {/* Main modal */}
       <div
