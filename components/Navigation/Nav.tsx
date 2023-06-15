@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Nav() {
   return (
-    <nav className="fixed bg-black dark:bg-gray-900  w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+    <nav className="fixed bg-black w-full z-20 top-0 left-0 ">
       <div className="max-w-screen-xl nav_hide flex flex-wrap items-center justify-between mx-auto p-4">
         <Link href="/" className="flex items-center ">
           <Image
@@ -17,7 +17,7 @@ export default function Nav() {
             alt="Haven Logo"
           />
 
-          <span className="self-center havenSwap text-2xl font-semibold whitespace-nowrap dark:text-black">
+          <span className="self-center havenSwap text-2xl font-semibold whitespace-nowrap ">
             Haven Swap
           </span>
         </Link>
@@ -55,7 +55,7 @@ export default function Nav() {
           className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
           id="navbar-sticky"
         >
-          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-black dark:bg-gray-800 md:dark:bg-gray-900 ">
+          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium  rounded-lg md:flex-row md:space-x-8 md:mt-0  md:bg-black bg-zinc-950 ">
             <li>
               <Link
                 href="/"

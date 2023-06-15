@@ -36,6 +36,37 @@
   justify-content: flex-start;
 }
 
+[data-rk] .ju367v9c {
+  background: orange !important;
+}
+
+.buy_crypto_bg {
+  overflow: auto;
+  height: auto;
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
+}
+
+.buy_sell_crypto_section header {
+  font-size: 2em;
+  font-weight: 600;
+  color: orange;
+}
+
+/* Styling the overscroll effect */
+.buy_crypto_bg::-webkit-scrollbar {
+  background-color: orange;
+}
+
+.buy_crypto_bg::-webkit-scrollbar-button {
+  background-color: rgb(255, 111, 0);
+}
+
+.buy_sell_crypto_section th,
+.buy_sell_crypto_section td {
+  text-transform: capitalize;
+  font-size: 1em;
+}
+
 @media screen and (max-width: 1023px) {
   .myTabContent {
     width: 100%;

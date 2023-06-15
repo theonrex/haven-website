@@ -9,14 +9,130 @@ import "../styles/market.css";
 import Head from "next/head";
 import Navbar from "../Layout/layout";
 import "@rainbow-me/rainbowkit/styles.css";
-import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
+import {
+  getDefaultWallets,
+  RainbowKitProvider,
+  darkTheme,
+} from "@rainbow-me/rainbowkit";
 import { configureChains, createClient, WagmiConfig } from "wagmi";
-import { polygonMumbai } from "wagmi/chains";
+import {
+  arbitrum,
+  arbitrumGoerli,
+  aurora,
+  auroraTestnet,
+  avalanche,
+  avalancheFuji,
+  baseGoerli,
+  bronos,
+  bronosTestnet,
+  bsc,
+  bscTestnet,
+  canto,
+  celo,
+  celoAlfajores,
+  fantom,
+  fantomTestnet,
+  foundry,
+  goerli,
+  hardhat,
+  iotex,
+  iotexTestnet,
+  localhost,
+  mainnet,
+  metis,
+  metisGoerli,
+  moonbaseAlpha,
+  moonbeam,
+  moonriver,
+  okc,
+  optimism,
+  optimismGoerli,
+  polygon,
+  polygonMumbai,
+  skaleBlockBrawlers,
+  skaleCalypso,
+  skaleCalypsoTestnet,
+  skaleChaosTestnet,
+  skaleCryptoBlades,
+  skaleCryptoColosseum,
+  skaleEuropa,
+  skaleEuropaTestnet,
+  skaleExorde,
+  skaleHumanProtocol,
+  skaleNebula,
+  skaleNebulaTestnet,
+  skaleRazor,
+  skaleTitan,
+  skaleTitanTestnet,
+  sepolia,
+  taraxa,
+  taraxaTestnet,
+  telos,
+  telosTestnet,
+  zkSync,
+  zkSyncTestnet,
+} from "wagmi/chains";
 import { publicProvider } from "wagmi/providers/public";
 import { store } from "../store";
 import { Provider } from "react-redux";
 const { chains, provider } = configureChains(
-  [polygonMumbai],
+  [
+    arbitrum,
+    arbitrumGoerli,
+    aurora,
+    auroraTestnet,
+    avalanche,
+    avalancheFuji,
+    baseGoerli,
+    bronos,
+    bronosTestnet,
+    bsc,
+    bscTestnet,
+    canto,
+    celo,
+    celoAlfajores,
+    fantom,
+    fantomTestnet,
+    foundry,
+    goerli,
+    hardhat,
+    iotex,
+    iotexTestnet,
+    localhost,
+    mainnet,
+    metis,
+    metisGoerli,
+    moonbaseAlpha,
+    moonbeam,
+    moonriver,
+    okc,
+    optimism,
+    optimismGoerli,
+    polygon,
+    polygonMumbai,
+    skaleBlockBrawlers,
+    skaleCalypso,
+    skaleCalypsoTestnet,
+    skaleChaosTestnet,
+    skaleCryptoBlades,
+    skaleCryptoColosseum,
+    skaleEuropa,
+    skaleEuropaTestnet,
+    skaleExorde,
+    skaleHumanProtocol,
+    skaleNebula,
+    skaleNebulaTestnet,
+    skaleRazor,
+    skaleTitan,
+    skaleTitanTestnet,
+    sepolia,
+    taraxa,
+    taraxaTestnet,
+    telos,
+    telosTestnet,
+    zkSync,
+    zkSyncTestnet,
+  ],
   [publicProvider()]
 );
 const { connectors } = getDefaultWallets({
@@ -47,7 +163,16 @@ export default function App({ Component, pageProps }: AppProps) {
           <title> Haven Swap</title>
         </Head>
         <WagmiConfig client={wagmiClient}>
-          <RainbowKitProvider chains={chains}>
+          <RainbowKitProvider
+            chains={chains}
+            theme={darkTheme({
+              accentColor: "#7b3fe4",
+              accentColorForeground: "white",
+              borderRadius: "small",
+              fontStack: "system",
+              overlayBlur: "small",
+            })}
+          >
             <Navbar />
             <Component {...pageProps} />
           </RainbowKitProvider>

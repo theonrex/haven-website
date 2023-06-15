@@ -1,16 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import DashboardBody from "../../DashboardSection/dashboardBody";
 import "flowbite"; //tailwind plugin
-import axios from "axios";
 import DashboardSidebar from "@/DashboardSection/dashboardSidebar";
 import { WalletDataType } from "@/Types/WalletTypes";
+import GetUserAddress from "@/lib/WagmiHooks";
+import { useAccount, useNetwork } from "wagmi";
+// import { getAccount ,} from "@wagmi/core";
 
-export default function Dashboard({
-  WalletData,
-}: {
-  WalletData: WalletDataType;
-}) {
+export default function Dashboard() {
+  const [WalletData, setWalletData] = useState<WalletDataType | null>(null);
+  const { address, isConnecting, isDisconnected } = useAccount();
+  const { chain, chains } = useNetwork();
 
+  console.log("chains", chains);
+  console.log("chain", chain?.id);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const chainID = chain?.id;
+      try {
+        const response = await fetch(
+          `http://localhost:5001/getwalletbalance?address=${address}&chain=${chainID}`
+        );
+        const data = await response.json();
+        setWalletData(data);
+      } catch (error) {
+        console.log("Something went wrong", error);
+      }
+    };
+
+    fetchData();
+  }, [address]);
+
+  console.log("address", address);
+  console.log("WalletData", WalletData);
 
   return (
     <div className="dashboard_row">
@@ -18,29 +41,4 @@ export default function Dashboard({
       <DashboardBody WalletData={WalletData} />
     </div>
   );
-}
-
-export async function getServerSideProps() {
-  const address = "0xbB57fe722f02B9125F626aebCFb8Ca67d81f68EB";
-  const chain = "0x13881";
-  try {
-    const resquest = await fetch(
-      `http://localhost:5001/getwalletbalance?address=${address}&chain=${chain}`
-    );
-
-    const WalletBalanceData = await resquest.json();
-    console.log(WalletBalanceData);
-    return {
-      props: {
-        WalletData: WalletBalanceData,
-      },
-    };
-  } catch (error) {
-    console.log("Something went wrong", error);
-    return {
-      props: {
-        response: null,
-      },
-    };
-  }
 }
